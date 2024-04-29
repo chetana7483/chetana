@@ -26,7 +26,7 @@ class BiometricDataManager:
         else:
             print("id number not found in the database.")
 
-    def update_Data(self, id_number, new_Data):
+    def update_Data(self, id_number):
         if id_number in self.data:
             old_data = self.data[id_number]
             name = input("Enter new name (leave it blank to keep it as it is): ")
@@ -86,7 +86,8 @@ def main():
     manager = BiometricDataManager()
 
     while True:
-        print("\nMenu:")
+        print("\n\n**************************************************************")
+        print("\n~~~~~Menu~~~~~:")
         print("1. Create biometric data")
         print("2. Delete biometric data")
         print("3. Update biometric data")
@@ -95,6 +96,8 @@ def main():
         print("6. Exit")
 
         choice = input("Enter your choice: ")
+        print("**************************************************************")
+
 
         if choice == '1':
             id_number = input("Enter ID number: ")
@@ -113,8 +116,7 @@ def main():
 
         elif choice == '3':
             id_number = input("Enter ID number you want to: ")
-            new_data=BiometricData(name, age, DoB, nationality, id_number,biometric_type, visa_number)
-            manager.update_Data( id_number,new_data)
+            manager.update_Data( id_number)
 
         elif choice == '4':
             id_number = input("Enter id number to verify: ")
