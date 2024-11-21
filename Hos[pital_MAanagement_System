@@ -65,7 +65,7 @@ for (int i = 0; i < patient_count; i++) {
 if (patients[i].admitted) {
 printf("ID: %d, Name: %s, Age: %d, Gender: %c, Diagnosis: %s\n",
 patients[i].id, patients[i].name, patients[i].age,
-patients[i].gender, patients[i].diagnosis);
+patients[i].gender, patients[i].diagnosis);zz
 }
 }
 }
